@@ -1,0 +1,35 @@
+# ============================================================
+# RealSense D415 - Factory Default Estimates (UNCALIBRATED)
+# ------------------------------------------------------------
+# CAUTION: This file contains factory estimates, NOT calibrated values.
+#
+# D415 RGB camera intrinsics at 640x480:
+#   fx ≈ 385.5, fy ≈ 385.5, cx ≈ 319.5, cy ≈ 239.5
+#   (NOTE: D415 native RGB resolution is 1920x1080, scaled to 640x480)
+#
+# D415 Distortion (Brown-Conady model):
+#   k1 ≈ 0.0, k2 ≈ 0.0, p1 ≈ 0.0, p2 ≈ 0.0, k3 ≈ 0.0
+#   (Factory modules have very low distortion, but calibration
+#    is still recommended for sub-mm accuracy)
+#
+# BEFORE USE: Run camera calibration
+#   ros2 run camera_calibration cameracalibrator.py \
+#     image:=/camera/image_raw camera:=/camera --no-service-check
+#   Then replace values below with calibrated results.
+#
+# D415 vs D455 key differences:
+#   - D415: Global Shutter RGB (no motion blur) ← Better for ArUco tracking
+#   - D415: Higher depth accuracy at close range (0.3-3m)
+#   - D455: Wider FOV (90° vs 69°)
+# ============================================================
+camera_name: "d415"
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [385.5, 0.0, 319.5, 0.0, 385.5, 239.5, 0.0, 0.0, 1.0]
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.0, 0.0, 0.0, 0.0, 0.0]
+image_width: 640
+image_height: 480

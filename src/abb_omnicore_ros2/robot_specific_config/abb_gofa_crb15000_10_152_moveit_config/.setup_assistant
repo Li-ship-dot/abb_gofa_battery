@@ -1,0 +1,12 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: abb_gofa_support
+    relative_path: urdf/gofa_crb15000_10_152.xacro
+  srdf:
+    relative_path: config/gofa_crb15000_10_152.srdf
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

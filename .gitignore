@@ -1,0 +1,28 @@
+# ROS2 build artifacts
+build/
+install/
+log/
+*.so
+*.a
+*.pyc
+__pycache__/
+
+# ROS2 generated interfaces
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+
+# Large binary files (if any zip remains)
+*.zip

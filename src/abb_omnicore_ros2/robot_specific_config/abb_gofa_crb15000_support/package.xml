@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>abb_gofa_crb15000_support</name>
+  <version>1.0.0</version>
+  <description>
+    ROS-Industrial support for the ABB GoFa CRB 15000-10/1.52.
+
+    This package contains configuration data, 3D models and launch files
+    for the ABB GoFa CRB 15000-10/1.52 manipulator.
+
+    Note: The mesh files are based on the CRB 15000-12/1.27 variant as the
+    official GoFa CRB 15000-10/1.52 meshes are not available in the
+    ros-industrial/abb repository. The visual appearance may differ slightly
+    from the actual robot.
+
+    Joint limits are based on the ABB GoFa CRB 15000 specifications:
+    - Payload: 10 kg
+    - Reach: 1.52 m
+  </description>
+  <maintainer email="user@example.com">User</maintainer>
+  <license>Apache-2.0</license>
+
+  <url type="website">http://wiki.ros.org/abb_gofa_crb15000_support</url>
+  <url type="bugtracker">https://github.com/ros-industrial/abb/issues</url>
+  <url type="repository">https://github.com/ros-industrial/abb</url>
+
+  <author>ROS-Industrial community</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>abb_resources</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>xacro</depend>
+
+  <exec_depend>rviz2</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

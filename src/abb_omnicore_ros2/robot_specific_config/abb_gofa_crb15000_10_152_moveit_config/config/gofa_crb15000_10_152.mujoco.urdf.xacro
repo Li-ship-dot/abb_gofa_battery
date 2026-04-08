@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+  URDF xacro for ABB GoFa CRB15000 with MuJoCo ros2_control
+
+  This file is designed for use with mujoco_ros2_control.
+  It includes the MuJoCo-specific ros2_control configuration.
+-->
+<robot name="abb_gofa_crb15000_10_152" xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- Arguments -->
+  <xacro:arg name="prefix" default=""/>
+
+  <!-- Robot description (from macro) -->
+  <xacro:include filename="$(find abb_gofa_crb15000_support)/urdf/gofa_crb15000_10_152_macro.xacro"/>
+  <xacro:abb_gofa_crb15000_10_152 prefix="$(arg prefix)"/>
+
+  <!-- MuJoCo ros2_control -->
+  <xacro:include filename="$(find abb_gofa_crb15000_support)/urdf/gofa_crb15000.muJoCo.ros2_control.xacro" />
+  <xacro:abb_gofa_crb15000_10_152_muJoCo_ros2_control name="MujocoSystem" prefix="$(arg prefix)"/>
+</robot>

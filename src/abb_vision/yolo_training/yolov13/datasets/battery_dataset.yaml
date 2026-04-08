@@ -1,0 +1,25 @@
+# YOLOv13 锂电池检测数据集配置
+# 使用说明:
+# 1. 创建数据集目录结构
+# 2. 将图像放入对应文件夹
+# 3. 修改 paths 配置
+
+# 数据集根目录
+path: ../../datasets/battery
+train: images/train
+val: images/val
+test: images/test
+
+# 类别数量
+nc: 1
+
+# 类别名称
+names:
+  0: lithium_battery
+
+# 额外的分割类 (如果做实例分割)
+# nc: 3
+# names:
+#   0: battery_cell
+#   1: battery_module
+#   2: battery_pack

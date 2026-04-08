@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.ros.org/schema/package_format/3.xsd"?>
+<package format="3">
+  <name>abb_gofa_support</name>
+  <version>1.0.0</version>
+  <description>
+    Support package for ABB GoFa CRB15000-10/1.52 robot
+    Contains URDF/xacro files and ros2_control configuration
+  </description>
+  <maintainer email="TODO@example.com">TODO</maintainer>
+  <license>Apache 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>abb_resources</exec_depend>
+  <exec_depend>abb_hardware_interface</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,5 @@
+ERROR: the following packages/stacks could not have their rosdep keys resolved
+to system dependencies:
+abb_bringup: Cannot locate rosdep definition for [abb_irb1200_5_90_moveit_config]
+Continuing to install resolvable dependencies...
+#All required rosdeps installed successfully

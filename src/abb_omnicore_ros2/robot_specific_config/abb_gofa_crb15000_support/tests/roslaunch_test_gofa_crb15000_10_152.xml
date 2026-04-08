@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <group ns="load_gofa_crb15000_10_152__">
+    <include file="$(find abb_gofa_crb15000_support)/launch/load_gofa_crb15000_10_152.launch"/>
+  </group>
+
+  <group ns="test_gofa_crb15000_10_152__">
+    <include file="$(find abb_gofa_crb15000_support)/launch/test_gofa_crb15000_10_152.launch"/>
+  </group>
+</launch>

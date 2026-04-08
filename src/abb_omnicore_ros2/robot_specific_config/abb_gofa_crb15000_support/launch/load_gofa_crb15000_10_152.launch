@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro '$(find abb_gofa_crb15000_support)/urdf/gofa_crb15000_10_152.xacro'" />
+</launch>

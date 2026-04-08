@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['retort-pouch']
+
+roboflow:
+  workspace: nazir
+  project: retort-pouch-yzwav
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/nazir/retort-pouch-yzwav/dataset/2

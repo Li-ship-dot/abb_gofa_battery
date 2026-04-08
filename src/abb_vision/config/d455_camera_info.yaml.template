@@ -1,0 +1,22 @@
+# ============================================================
+# CAUTION: UNCALLIBRATED PLACEHOLDER VALUES
+# This file contains factory-default estimates, NOT calibrated values.
+# fx ≈ 385-615 depending on resolution (D455 spec)
+# Distortion coefficients are NOT zero for RealSense D455
+#
+# BEFORE USE: Run camera calibration
+#   ros2 run camera_calibration cameracalibrator.py \
+#     image:=/camera/image_raw camera:=/camera --no-service-check
+# Then replace the values below with calibrated ones.
+# ============================================================
+camera_name: "d455"
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [615.0, 0.0, 320.0, 0.0, 615.0, 240.0, 0.0, 0.0, 1.0]
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.0, 0.0, 0.0, 0.0, 0.0]
+image_width: 640
+image_height: 480

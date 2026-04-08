@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!--
+  MuJoCo ros2_control configuration for ABB GoFa CRB15000
+
+  This configuration uses the mujoco_ros2_control/MujocoSystemInterface
+  hardware plugin to interface ros2_control with MuJoCo physics simulator.
+
+  Usage:
+    <xacro:include filename="$(find abb_gofa_crb15000_support)/urdf/gofa_crb15000.muJoCo.ros2_control.xacro" />
+    <xacro:abb_gofa_crb15000_10_152_muJoCo_ros2_control name="MujocoSystem" prefix=""/>
+-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="abb_gofa_crb15000_10_152_muJoCo_ros2_control" params="name prefix">
+    <ros2_control name="${name}" type="system">
+      <hardware>
+        <!-- MuJoCo hardware interface plugin -->
+        <plugin>mujoco_ros2_control/MujocoSystemInterface</plugin>
+      </hardware>
+
+      <!-- Joint 1 - Base rotation: ±270° -->
+      <joint name="${prefix}joint_1">
+        <command_interface name="position">
+          <param name="min">${-radians(270)}</param>
+          <param name="max">${radians(270)}</param>
+        </command_interface>
+        <command_interface name="velocity">
+          <param name="min">-2.094</param>
+          <param name="max">2.094</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+
+      <!-- Joint 2 - Shoulder pitch: -140° to +90° -->
+      <joint name="${prefix}joint_2">
+        <command_interface name="position">
+          <param name="min">-2.44</param>
+          <param name="max">1.57</param>
+        </command_interface>
+        <command_interface name="velocity">
+          <param name="min">-2.09</param>
+          <param name="max">2.09</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+
+      <!-- Joint 3 - Elbow: -225° to +85° -->
+      <joint name="${prefix}joint_3">
+        <command_interface name="position">
+          <param name="min">${-radians(225)}</param>
+          <param name="max">${radians(85)}</param>
+        </command_interface>
+        <command_interface name="velocity">
+          <param name="min">-2.18</param>
+          <param name="max">2.18</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+
+      <!-- Joint 4 - Wrist 1 rotation: ±200° -->
+      <joint name="${prefix}joint_4">
+        <command_interface name="position">
+          <param name="min">${-radians(200)}</param>
+          <param name="max">${radians(200)}</param>
+        </command_interface>
+        <command_interface name="velocity">
+          <param name="min">-3.49</param>
+          <param name="max">3.49</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+
+      <!-- Joint 5 - Wrist 2 pitch: ±130° -->
+      <joint name="${prefix}joint_5">
+        <command_interface name="position">
+          <param name="min">${-radians(130)}</param>
+          <param name="max">${radians(130)}</param>
+        </command_interface>
+        <command_interface name="velocity">
+          <param name="min">-3.49</param>
+          <param name="max">3.49</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+
+      <!-- Joint 6 - Wrist 3 rotation: ±270° -->
+      <joint name="${prefix}joint_6">
+        <command_interface name="position">
+          <param name="min">${-radians(270)}</param>
+          <param name="max">${radians(270)}</param>
+        </command_interface>
+        <command_interface name="velocity">
+          <param name="min">-3.49</param>
+          <param name="max">3.49</param>
+        </command_interface>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+
+    </ros2_control>
+  </xacro:macro>
+
+</robot>

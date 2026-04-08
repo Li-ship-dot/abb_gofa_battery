@@ -1,0 +1,17 @@
+repositories:
+  abb_libegm:
+    type: git
+    url: https://github.com/NoMagicAi/abb_libegm.git
+    version: 4721705f8cd36481a7e2684dfc2c0483ebbc7cb4
+  abb_librws:
+    type: git
+    url: https://github.com/herrvonregen/abb_librws.git
+    version: rws2_port_formated
+  abb_egm_rws_managers:
+    type: git
+    url: https://github.com/herrvonregen/abb_egm_rws_managers.git
+    version: 3a8730a525f821b80820fbb76806e34752cafdc3
+  abb_ros2_msgs:
+    type: git
+    url: https://github.com/gbartyzel/abb_ros2_msgs.git
+    version: rolling

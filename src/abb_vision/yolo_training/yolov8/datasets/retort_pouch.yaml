@@ -1,0 +1,10 @@
+# Roboflow retort-pouch 数据集配置
+# 路径: /home/i/ros2_ws/src/abb_vision/yolo_training/datasets/retort_pouch
+
+path: /home/i/ros2_ws/src/abb_vision/yolo_training/datasets/retort_pouch
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 1
+names: ['retort-pouch']

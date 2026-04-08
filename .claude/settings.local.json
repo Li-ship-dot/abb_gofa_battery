@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(source /opt/ros/humble/setup.bash)",
+      "Bash(/opt/ros/humble/lib/mujoco_ros2_control/ros2_control_node --help)",
+      "Bash(timeout 60 python3 mujoco_visualization.py)",
+      "Bash(python3:*)",
+      "Bash(curl -sL \"https://api.github.com/repos/LitchiCheng/ros2_package/contents\")",
+      "Bash(curl -sL \"https://api.github.com/repos/LitchiCheng/ros2_package/contents/so_arm100_moveit/launch\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/LitchiCheng/ros2_package/main/so_arm100_moveit/launch/demo.launch.py\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/LitchiCheng/ros2_package/main/so_arm100_moveit/config/display_so_arm100_rviz.urdf.xacro\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/LitchiCheng/ros2_package/main/so_arm100_moveit/config/display_so_arm100_rviz.ros2_control.xacro\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/LitchiCheng/ros2_package/main/so_arm100_moveit/launch/rsp.launch.py\")",
+      "Bash(curl -sL \"https://api.github.com/repos/LitchiCheng/ros2_package/contents/joint_state_pkg\")",
+      "Bash(curl -sL \"https://api.github.com/search/code?q=mujoco+repo:LitchiCheng/ros2_package\")",
+      "Bash(curl -sL \"https://api.github.com/repos/LitchiCheng/ros2_package/contents/display_so_arm100_rviz\")",
+      "Bash(curl -sL \"https://api.github.com/repos/LitchiCheng/ros2_package/contents/display_so_arm100_rviz/launch\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/LitchiCheng/ros2_package/main/display_so_arm100_rviz/launch/display_urdf.py\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/LitchiCheng/ros2_package/main/so_arm100_moveit/launch/spawn_controllers.launch.py\")",
+      "Bash(colcon build:*)",
+      "Bash(source /home/i/ros2_ws/install/setup.bash)",
+      "Bash(xacro --inorder /home/i/ros2_ws/src/abb_omnicore_ros2/robot_specific_config/abb_gofa_crb15000_10_152_moveit_config/config/gofa_crb15000_10_152.mujoco.urdf.xacro)",
+      "Bash(ros2 pkg:*)",
+      "Bash(dpkg -L ros-humble-mujoco-ros2-control)",
+      "Bash(grep -E \"\\\\.md$|\\\\.rst$|README\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/FORCE-ROS/mujoco_ros2_control/main/README.md\")",
+      "Bash(pkill -f \"ros2 launch\")",
+      "Bash(pkill -f \"rviz2\")",
+      "Bash(pkill -f \"ros2_control_node\")",
+      "Bash(timeout 15 ros2 launch abb_gofa_crb15000_10_152_moveit_config mujoco_demo.launch.py sim:=true rviz:=true)"
+    ]
+  }
+}
